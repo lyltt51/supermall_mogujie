@@ -2,7 +2,15 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
-  alias: {
-    "assets": "@/assets"
+  configureWebpack: {
+    resolve: {
+      alias: {
+        'views': '@/views',
+        'components': '@/components',
+        'network': '@/network',
+        'common': '@/common',
+        'assets': '@/assets',
+      }
+    }
   }
 })
