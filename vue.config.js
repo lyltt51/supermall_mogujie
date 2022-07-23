@@ -10,6 +10,7 @@ module.exports = defineConfig({
         'network': '@/network',
         'common': '@/common',
         'assets': '@/assets',
+        'utils': '@/utils'
       }
     }
   }
