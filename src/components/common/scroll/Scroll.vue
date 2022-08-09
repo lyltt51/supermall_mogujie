@@ -23,10 +23,20 @@ export default {
           return 0
         }
       },
+      click: {
+        type: Boolean,
+        default: true
+      },
       pullUpLoad: {
         type: Boolean,
         default() {
           return false
+        }
+      },
+      data: {
+        type: Array,
+        default() {
+          return []
         }
       }
     },
