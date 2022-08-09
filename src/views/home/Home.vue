@@ -48,8 +48,6 @@ import NavBar from 'components/common/navbar/NavBar.vue'
 import Scroll from 'components/common/scroll/Scroll.vue'
 import TabControl from 'components/content/tabControl/TabControl.vue'
 import GoodsList from 'components/content/goods/GoodsList.vue'
-import BackTop from 'components/content/backTop/BackTop.vue'
-
 
 import HomeSwiper from './childComps/HomeSwiper.vue'
 import HomeRecommend from './childComps/HomeRecommend.vue'
@@ -57,8 +55,7 @@ import HomeFeature from './childComps/HomeFeature.vue'
 
 import { getHomeMultidata, getHomeGoods } from 'network/home.js'
 
-import { debounce } from 'utils/utils.js'
-
+import { itemListenerMixin, backTopMixin } from 'common/mixin.js'
 export default {
   name: 'Home',
   components: {
@@ -68,8 +65,7 @@ export default {
     HomeFeature,
     TabControl,
     GoodsList,
-    Scroll,
-    BackTop
+    Scroll
   },
   data() {
     return {
@@ -81,12 +77,12 @@ export default {
         'sell': {page:0, list: []}
       },
       currentType: 'pop',
-      isBackShow: false,
       tabOffsetTop: 0,
       isTabFixed: false,
       saveY: 0
     }
   },
+  mixins: [itemListenerMixin, backTopMixin],
   computed: {
     showGoods() {
       return this.goods[this.currentType].list
@@ -100,10 +96,6 @@ export default {
     this.getHomeGoods('sell')
   },
   mounted() {
-   const refresh =  debounce(this.$refs.scroll.refresh,200)
-    this.$bus.$on('itemImageLoad',() => {
-       refresh()
-    })
   },
   activated() {
     this.$refs.scroll.scrollTo(0, this.saveY, 0)
@@ -126,15 +118,13 @@ export default {
           this.currentType = 'sell'
           break
       }
-      this.$refs.tabControl1.currentIndex = index
-      this.$refs.tabControl2.currentIndex = index
-    },
-    backClick() {
-      this.$refs.scroll.scrollTo(0,0,500)
+      if (this.$refs.tabControl1 !== undefined) {
+        this.$refs.tabControl1.currentIndex = index
+        this.$refs.tabControl2.currentIndex = index
+      }
     },
     contentScroll(position) {
-      this.isBackShow = (-position.y) > 1000 ? true : false
-
+      this.listenerShowBackTop(position)
       this.isTabFixed = (-position.y) > this.tabOffsetTop
     },
     loadMore() {

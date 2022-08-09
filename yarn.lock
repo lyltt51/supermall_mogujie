@@ -3373,6 +3373,11 @@
   "resolved" "https://registry.npmmirror.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   "version" "2.0.6"
 
+"fastclick@^1.0.6":
+  "integrity" "sha512-cXyDBT4g0uWl/Xe75QspBDAgAWQ0lkPi/zgp6YFEUHj6WV6VIZl7R6TiDZhdOVU3W4ehp/8tG61Jev1jit+ztQ=="
+  "resolved" "https://registry.npmmirror.com/fastclick/-/fastclick-1.0.6.tgz"
+  "version" "1.0.6"
+
 "fastq@^1.6.0":
   "integrity" "sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw=="
   "resolved" "https://registry.npmmirror.com/fastq/-/fastq-1.13.0.tgz"
@@ -4739,7 +4744,7 @@
   dependencies:
     "boolbase" "^1.0.0"
 
-"object-assign@^4.0.1":
+"object-assign@^4.0.1", "object-assign@>=4.0.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
   "resolved" "https://registry.npmmirror.com/object-assign/-/object-assign-4.1.1.tgz"
   "version" "4.1.1"
@@ -5248,6 +5253,14 @@
     "cssnano-utils" "^3.1.0"
     "postcss-value-parser" "^4.2.0"
 
+"postcss-px-to-viewport@^1.1.0":
+  "integrity" "sha512-EtgneDV+BWtdZly/FNNcY+GynSsvkZE8wFKapwO4cvke/LjRTNbBBZNglG/hipY1Wfb22u7qiMndLJ8maYEwXQ=="
+  "resolved" "https://registry.npmmirror.com/postcss-px-to-viewport/-/postcss-px-to-viewport-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "object-assign" ">=4.0.1"
+    "postcss" ">=5.0.2"
+
 "postcss-reduce-initial@^5.1.0":
   "integrity" "sha512-5OgTUviz0aeH6MtBjHfbr57tml13PuedK/Ecg8szzd4XRMbYxH4572JFG067z+FqBIf6Zp/d+0581glkvvWMFw=="
   "resolved" "https://registry.npmmirror.com/postcss-reduce-initial/-/postcss-reduce-initial-5.1.0.tgz"
@@ -5291,7 +5304,7 @@
   "resolved" "https://registry.npmmirror.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^7.0.0 || ^8.0.1", "postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.2.15", "postcss@^8.2.2", "postcss@^8.2.6", "postcss@^8.3.5", "postcss@^8.4.14", "postcss@^8.4.7":
+"postcss@^7.0.0 || ^8.0.1", "postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.2.15", "postcss@^8.2.2", "postcss@^8.2.6", "postcss@^8.3.5", "postcss@^8.4.14", "postcss@^8.4.7", "postcss@>=5.0.2":
   "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
   "resolved" "https://registry.npmmirror.com/postcss/-/postcss-8.4.14.tgz"
   "version" "8.4.14"
@@ -6386,6 +6399,11 @@
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
   "resolved" "https://registry.npmmirror.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
   "version" "2.3.4"
+
+"vue-lazyload@^1.2.6":
+  "integrity" "sha512-6a61+pzwcfowhLRQiPdmRuJ40n/4fL/sEynu8KQZoCf5RVA0NH0X68vplLY0+lUM8mKNScYomaepV+hdjgnZhg=="
+  "resolved" "https://registry.npmmirror.com/vue-lazyload/-/vue-lazyload-1.2.6.tgz"
+  "version" "1.2.6"
 
 "vue-loader@^17.0.0":
   "integrity" "sha512-OWSXjrzIvbF2LtOUmxT3HYgwwubbfFelN8PAP9R9dwpIkj48TVioHhWWSx7W7fk+iF5cgg3CBJRxwTdtLU4Ecg=="
